@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-send/send/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-send/node_modules/send/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-send">npmtest-send (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-send/send/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-send/node_modules/send/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">18.62% <small>(73 / 392)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric">1 statement, 1 function, 1 branch</span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-send/send/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-send/node_modules/send/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -2450,7 +2448,7 @@ module.exports.mime = mime
 &nbsp;
 /* istanbul ignore next */
 var listenerCount = EventEmitter.listenerCount ||
-<span class="fstat-skip" title="function not covered" ><span class="branch-1 cbranch-skip" title="branch not covered" >  function (emitter, type) {</span> <span class="cstat-skip" title="statement not covered" >return emitter.listeners(type).length }</span></span>
+<span class="fstat-skip" title="function not covered"><span class="branch-1 cbranch-skip" title="branch not covered">  function (emitter, type) {</span> <span class="cstat-skip" title="statement not covered">return emitter.listeners(type).length }</span></span>
 &nbsp;
 /**
  * Return a `SendStream` for `req` and `path`.
@@ -2462,8 +2460,8 @@ var listenerCount = EventEmitter.listenerCount ||
  * @public
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function send (req, path, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return new SendStream(req, path, options)</span>
+<span class="fstat-no" title="function not covered">function send (req, path, options) {</span>
+<span class="cstat-no" title="statement not covered">  return new SendStream(req, path, options)</span>
 }
 &nbsp;
 /**
@@ -2475,72 +2473,72 @@ var listenerCount = EventEmitter.listenerCount ||
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function SendStream (req, path, options) {</span>
-<span class="cstat-no" title="statement not covered" >  Stream.call(this)</span>
+<span class="fstat-no" title="function not covered">function SendStream (req, path, options) {</span>
+<span class="cstat-no" title="statement not covered">  Stream.call(this)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var opts = options || {}</span>
+<span class="cstat-no" title="statement not covered">  var opts = options || {}</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.options = opts</span>
-<span class="cstat-no" title="statement not covered" >  this.path = path</span>
-<span class="cstat-no" title="statement not covered" >  this.req = req</span>
+<span class="cstat-no" title="statement not covered">  this.options = opts</span>
+<span class="cstat-no" title="statement not covered">  this.path = path</span>
+<span class="cstat-no" title="statement not covered">  this.req = req</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._acceptRanges = opts.acceptRanges !== undefined</span>
+<span class="cstat-no" title="statement not covered">  this._acceptRanges = opts.acceptRanges !== undefined</span>
     ? Boolean(opts.acceptRanges)
     : true
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._cacheControl = opts.cacheControl !== undefined</span>
+<span class="cstat-no" title="statement not covered">  this._cacheControl = opts.cacheControl !== undefined</span>
     ? Boolean(opts.cacheControl)
     : true
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._etag = opts.etag !== undefined</span>
+<span class="cstat-no" title="statement not covered">  this._etag = opts.etag !== undefined</span>
     ? Boolean(opts.etag)
     : true
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._dotfiles = opts.dotfiles !== undefined</span>
+<span class="cstat-no" title="statement not covered">  this._dotfiles = opts.dotfiles !== undefined</span>
     ? opts.dotfiles
     : 'ignore'
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (this._dotfiles !== 'ignore' &amp;&amp; this._dotfiles !== 'allow' &amp;&amp; this._dotfiles !== 'deny') {</span>
-<span class="cstat-no" title="statement not covered" >    throw new TypeError('dotfiles option must be "allow", "deny", or "ignore"')</span>
+<span class="cstat-no" title="statement not covered">  if (this._dotfiles !== 'ignore' &amp;&amp; this._dotfiles !== 'allow' &amp;&amp; this._dotfiles !== 'deny') {</span>
+<span class="cstat-no" title="statement not covered">    throw new TypeError('dotfiles option must be "allow", "deny", or "ignore"')</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._hidden = Boolean(opts.hidden)</span>
+<span class="cstat-no" title="statement not covered">  this._hidden = Boolean(opts.hidden)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (opts.hidden !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >    deprecate('hidden: use dotfiles: \'' + (this._hidden ? 'allow' : 'ignore') + '\' instead')</span>
+<span class="cstat-no" title="statement not covered">  if (opts.hidden !== undefined) {</span>
+<span class="cstat-no" title="statement not covered">    deprecate('hidden: use dotfiles: \'' + (this._hidden ? 'allow' : 'ignore') + '\' instead')</span>
   }
 &nbsp;
   // legacy support
-<span class="cstat-no" title="statement not covered" >  if (opts.dotfiles === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >    this._dotfiles = undefined</span>
+<span class="cstat-no" title="statement not covered">  if (opts.dotfiles === undefined) {</span>
+<span class="cstat-no" title="statement not covered">    this._dotfiles = undefined</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._extensions = opts.extensions !== undefined</span>
+<span class="cstat-no" title="statement not covered">  this._extensions = opts.extensions !== undefined</span>
     ? normalizeList(opts.extensions, 'extensions option')
     : []
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._index = opts.index !== undefined</span>
+<span class="cstat-no" title="statement not covered">  this._index = opts.index !== undefined</span>
     ? normalizeList(opts.index, 'index option')
     : ['index.html']
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._lastModified = opts.lastModified !== undefined</span>
+<span class="cstat-no" title="statement not covered">  this._lastModified = opts.lastModified !== undefined</span>
     ? Boolean(opts.lastModified)
     : true
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._maxage = opts.maxAge || opts.maxage</span>
-<span class="cstat-no" title="statement not covered" >  this._maxage = typeof this._maxage === 'string'</span>
+<span class="cstat-no" title="statement not covered">  this._maxage = opts.maxAge || opts.maxage</span>
+<span class="cstat-no" title="statement not covered">  this._maxage = typeof this._maxage === 'string'</span>
     ? ms(this._maxage)
     : Number(this._maxage)
-<span class="cstat-no" title="statement not covered" >  this._maxage = !isNaN(this._maxage)</span>
+<span class="cstat-no" title="statement not covered">  this._maxage = !isNaN(this._maxage)</span>
     ? Math.min(Math.max(0, this._maxage), MAX_MAXAGE)
     : 0
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._root = opts.root</span>
+<span class="cstat-no" title="statement not covered">  this._root = opts.root</span>
     ? resolve(opts.root)
     : null
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!this._root &amp;&amp; opts.from) {</span>
-<span class="cstat-no" title="statement not covered" >    this.from(opts.from)</span>
+<span class="cstat-no" title="statement not covered">  if (!this._root &amp;&amp; opts.from) {</span>
+<span class="cstat-no" title="statement not covered">    this.from(opts.from)</span>
   }
 }
 &nbsp;
@@ -2558,10 +2556,10 @@ util.inherits(SendStream, Stream)
  * @api public
  */
 &nbsp;
-SendStream.prototype.etag = deprecate.function(<span class="fstat-no" title="function not covered" >function etag (val) {</span>
-<span class="cstat-no" title="statement not covered" >  this._etag = Boolean(val)</span>
-<span class="cstat-no" title="statement not covered" >  debug('etag %s', this._etag)</span>
-<span class="cstat-no" title="statement not covered" >  return this</span>
+SendStream.prototype.etag = deprecate.function(<span class="fstat-no" title="function not covered">function etag (val) {</span>
+<span class="cstat-no" title="statement not covered">  this._etag = Boolean(val)</span>
+<span class="cstat-no" title="statement not covered">  debug('etag %s', this._etag)</span>
+<span class="cstat-no" title="statement not covered">  return this</span>
 }, 'send.etag: pass etag as option')
 &nbsp;
 /**
@@ -2572,11 +2570,11 @@ SendStream.prototype.etag = deprecate.function(<span class="fstat-no" title="fun
  * @api public
  */
 &nbsp;
-SendStream.prototype.hidden = deprecate.function(<span class="fstat-no" title="function not covered" >function hidden (val) {</span>
-<span class="cstat-no" title="statement not covered" >  this._hidden = Boolean(val)</span>
-<span class="cstat-no" title="statement not covered" >  this._dotfiles = undefined</span>
-<span class="cstat-no" title="statement not covered" >  debug('hidden %s', this._hidden)</span>
-<span class="cstat-no" title="statement not covered" >  return this</span>
+SendStream.prototype.hidden = deprecate.function(<span class="fstat-no" title="function not covered">function hidden (val) {</span>
+<span class="cstat-no" title="statement not covered">  this._hidden = Boolean(val)</span>
+<span class="cstat-no" title="statement not covered">  this._dotfiles = undefined</span>
+<span class="cstat-no" title="statement not covered">  debug('hidden %s', this._hidden)</span>
+<span class="cstat-no" title="statement not covered">  return this</span>
 }, 'send.hidden: use dotfiles option')
 &nbsp;
 /**
@@ -2588,11 +2586,11 @@ SendStream.prototype.hidden = deprecate.function(<span class="fstat-no" title="f
  * @api public
  */
 &nbsp;
-SendStream.prototype.index = deprecate.function(<span class="fstat-no" title="function not covered" >function index (paths) {</span>
-<span class="cstat-no" title="statement not covered" >  var index = !paths ? [] : normalizeList(paths, 'paths argument')</span>
-<span class="cstat-no" title="statement not covered" >  debug('index %o', paths)</span>
-<span class="cstat-no" title="statement not covered" >  this._index = index</span>
-<span class="cstat-no" title="statement not covered" >  return this</span>
+SendStream.prototype.index = deprecate.function(<span class="fstat-no" title="function not covered">function index (paths) {</span>
+<span class="cstat-no" title="statement not covered">  var index = !paths ? [] : normalizeList(paths, 'paths argument')</span>
+<span class="cstat-no" title="statement not covered">  debug('index %o', paths)</span>
+<span class="cstat-no" title="statement not covered">  this._index = index</span>
+<span class="cstat-no" title="statement not covered">  return this</span>
 }, 'send.index: pass index as option')
 &nbsp;
 /**
@@ -2603,10 +2601,10 @@ SendStream.prototype.index = deprecate.function(<span class="fstat-no" title="fu
  * @api public
  */
 &nbsp;
-SendStream.prototype.root = <span class="fstat-no" title="function not covered" >function root (path) {</span>
-<span class="cstat-no" title="statement not covered" >  this._root = resolve(String(path))</span>
-<span class="cstat-no" title="statement not covered" >  debug('root %s', this._root)</span>
-<span class="cstat-no" title="statement not covered" >  return this</span>
+SendStream.prototype.root = <span class="fstat-no" title="function not covered">function root (path) {</span>
+<span class="cstat-no" title="statement not covered">  this._root = resolve(String(path))</span>
+<span class="cstat-no" title="statement not covered">  debug('root %s', this._root)</span>
+<span class="cstat-no" title="statement not covered">  return this</span>
 }
 &nbsp;
 SendStream.prototype.from = deprecate.function(SendStream.prototype.root,
@@ -2623,15 +2621,15 @@ SendStream.prototype.root = deprecate.function(SendStream.prototype.root,
  * @api public
  */
 &nbsp;
-SendStream.prototype.maxage = deprecate.function(<span class="fstat-no" title="function not covered" >function maxage (maxAge) {</span>
-<span class="cstat-no" title="statement not covered" >  this._maxage = typeof maxAge === 'string'</span>
+SendStream.prototype.maxage = deprecate.function(<span class="fstat-no" title="function not covered">function maxage (maxAge) {</span>
+<span class="cstat-no" title="statement not covered">  this._maxage = typeof maxAge === 'string'</span>
     ? ms(maxAge)
     : Number(maxAge)
-<span class="cstat-no" title="statement not covered" >  this._maxage = !isNaN(this._maxage)</span>
+<span class="cstat-no" title="statement not covered">  this._maxage = !isNaN(this._maxage)</span>
     ? Math.min(Math.max(0, this._maxage), MAX_MAXAGE)
     : 0
-<span class="cstat-no" title="statement not covered" >  debug('max-age %d', this._maxage)</span>
-<span class="cstat-no" title="statement not covered" >  return this</span>
+<span class="cstat-no" title="statement not covered">  debug('max-age %d', this._maxage)</span>
+<span class="cstat-no" title="statement not covered">  return this</span>
 }, 'send.maxage: pass maxAge as option')
 &nbsp;
 /**
@@ -2642,33 +2640,33 @@ SendStream.prototype.maxage = deprecate.function(<span class="fstat-no" title="f
  * @private
  */
 &nbsp;
-SendStream.prototype.error = <span class="fstat-no" title="function not covered" >function error (status, err) {</span>
+SendStream.prototype.error = <span class="fstat-no" title="function not covered">function error (status, err) {</span>
   // emit if listeners instead of responding
-<span class="cstat-no" title="statement not covered" >  if (listenerCount(this, 'error') !== 0) {</span>
-<span class="cstat-no" title="statement not covered" >    return this.emit('error', createError(status, err, {</span>
+<span class="cstat-no" title="statement not covered">  if (listenerCount(this, 'error') !== 0) {</span>
+<span class="cstat-no" title="statement not covered">    return this.emit('error', createError(status, err, {</span>
       expose: false
     }))
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var res = this.res</span>
-<span class="cstat-no" title="statement not covered" >  var msg = statuses[status] || String(status)</span>
-<span class="cstat-no" title="statement not covered" >  var doc = createHtmlDocument('Error', escapeHtml(msg))</span>
+<span class="cstat-no" title="statement not covered">  var res = this.res</span>
+<span class="cstat-no" title="statement not covered">  var msg = statuses[status] || String(status)</span>
+<span class="cstat-no" title="statement not covered">  var doc = createHtmlDocument('Error', escapeHtml(msg))</span>
 &nbsp;
   // clear existing headers
-<span class="cstat-no" title="statement not covered" >  clearHeaders(res)</span>
+<span class="cstat-no" title="statement not covered">  clearHeaders(res)</span>
 &nbsp;
   // add error headers
-<span class="cstat-no" title="statement not covered" >  if (err &amp;&amp; err.headers) {</span>
-<span class="cstat-no" title="statement not covered" >    setHeaders(res, err.headers)</span>
+<span class="cstat-no" title="statement not covered">  if (err &amp;&amp; err.headers) {</span>
+<span class="cstat-no" title="statement not covered">    setHeaders(res, err.headers)</span>
   }
 &nbsp;
   // send basic response
-<span class="cstat-no" title="statement not covered" >  res.statusCode = status</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Type', 'text/html; charset=UTF-8')</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Length', Buffer.byteLength(doc))</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Security-Policy', "default-src 'self'")</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('X-Content-Type-Options', 'nosniff')</span>
-<span class="cstat-no" title="statement not covered" >  res.end(doc)</span>
+<span class="cstat-no" title="statement not covered">  res.statusCode = status</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Type', 'text/html; charset=UTF-8')</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Length', Buffer.byteLength(doc))</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Security-Policy', "default-src 'self'")</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('X-Content-Type-Options', 'nosniff')</span>
+<span class="cstat-no" title="statement not covered">  res.end(doc)</span>
 }
 &nbsp;
 /**
@@ -2678,8 +2676,8 @@ SendStream.prototype.error = <span class="fstat-no" title="function not covered"
  * @private
  */
 &nbsp;
-SendStream.prototype.hasTrailingSlash = <span class="fstat-no" title="function not covered" >function hasTrailingSlash () {</span>
-<span class="cstat-no" title="statement not covered" >  return this.path[this.path.length - 1] === '/'</span>
+SendStream.prototype.hasTrailingSlash = <span class="fstat-no" title="function not covered">function hasTrailingSlash () {</span>
+<span class="cstat-no" title="statement not covered">  return this.path[this.path.length - 1] === '/'</span>
 }
 &nbsp;
 /**
@@ -2689,8 +2687,8 @@ SendStream.prototype.hasTrailingSlash = <span class="fstat-no" title="function n
  * @api private
  */
 &nbsp;
-SendStream.prototype.isConditionalGET = <span class="fstat-no" title="function not covered" >function isConditionalGET () {</span>
-<span class="cstat-no" title="statement not covered" >  return this.req.headers['if-match'] ||</span>
+SendStream.prototype.isConditionalGET = <span class="fstat-no" title="function not covered">function isConditionalGET () {</span>
+<span class="cstat-no" title="statement not covered">  return this.req.headers['if-match'] ||</span>
     this.req.headers['if-unmodified-since'] ||
     this.req.headers['if-none-match'] ||
     this.req.headers['if-modified-since']
@@ -2703,27 +2701,27 @@ SendStream.prototype.isConditionalGET = <span class="fstat-no" title="function n
  * @private
  */
 &nbsp;
-SendStream.prototype.isPreconditionFailure = <span class="fstat-no" title="function not covered" >function isPreconditionFailure () {</span>
-<span class="cstat-no" title="statement not covered" >  var req = this.req</span>
-<span class="cstat-no" title="statement not covered" >  var res = this.res</span>
+SendStream.prototype.isPreconditionFailure = <span class="fstat-no" title="function not covered">function isPreconditionFailure () {</span>
+<span class="cstat-no" title="statement not covered">  var req = this.req</span>
+<span class="cstat-no" title="statement not covered">  var res = this.res</span>
 &nbsp;
   // if-match
-<span class="cstat-no" title="statement not covered" >  var match = req.headers['if-match']</span>
-<span class="cstat-no" title="statement not covered" >  if (match) {</span>
-<span class="cstat-no" title="statement not covered" >    var etag = res.getHeader('ETag')</span>
-<span class="cstat-no" title="statement not covered" >    return !etag || (match !== '*' &amp;&amp; match.split(TOKEN_LIST_REGEXP).every(<span class="fstat-no" title="function not covered" >function (match) {</span></span>
-<span class="cstat-no" title="statement not covered" >      return match !== etag &amp;&amp; match !== 'W/' + etag &amp;&amp; 'W/' + match !== etag</span>
+<span class="cstat-no" title="statement not covered">  var match = req.headers['if-match']</span>
+<span class="cstat-no" title="statement not covered">  if (match) {</span>
+<span class="cstat-no" title="statement not covered">    var etag = res.getHeader('ETag')</span>
+<span class="cstat-no" title="statement not covered">    return !etag || (match !== '*' &amp;&amp; match.split(TOKEN_LIST_REGEXP).every(<span class="fstat-no" title="function not covered">function (match) {</span></span>
+<span class="cstat-no" title="statement not covered">      return match !== etag &amp;&amp; match !== 'W/' + etag &amp;&amp; 'W/' + match !== etag</span>
     }))
   }
 &nbsp;
   // if-unmodified-since
-<span class="cstat-no" title="statement not covered" >  var unmodifiedSince = parseHttpDate(req.headers['if-unmodified-since'])</span>
-<span class="cstat-no" title="statement not covered" >  if (!isNaN(unmodifiedSince)) {</span>
-<span class="cstat-no" title="statement not covered" >    var lastModified = parseHttpDate(res.getHeader('Last-Modified'))</span>
-<span class="cstat-no" title="statement not covered" >    return isNaN(lastModified) || lastModified &gt; unmodifiedSince</span>
+<span class="cstat-no" title="statement not covered">  var unmodifiedSince = parseHttpDate(req.headers['if-unmodified-since'])</span>
+<span class="cstat-no" title="statement not covered">  if (!isNaN(unmodifiedSince)) {</span>
+<span class="cstat-no" title="statement not covered">    var lastModified = parseHttpDate(res.getHeader('Last-Modified'))</span>
+<span class="cstat-no" title="statement not covered">    return isNaN(lastModified) || lastModified &gt; unmodifiedSince</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return false</span>
+<span class="cstat-no" title="statement not covered">  return false</span>
 }
 &nbsp;
 /**
@@ -2732,14 +2730,14 @@ SendStream.prototype.isPreconditionFailure = <span class="fstat-no" title="funct
  * @private
  */
 &nbsp;
-SendStream.prototype.removeContentHeaderFields = <span class="fstat-no" title="function not covered" >function removeContentHeaderFields () {</span>
-<span class="cstat-no" title="statement not covered" >  var res = this.res</span>
-<span class="cstat-no" title="statement not covered" >  var headers = getHeaderNames(res)</span>
+SendStream.prototype.removeContentHeaderFields = <span class="fstat-no" title="function not covered">function removeContentHeaderFields () {</span>
+<span class="cstat-no" title="statement not covered">  var res = this.res</span>
+<span class="cstat-no" title="statement not covered">  var headers = getHeaderNames(res)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; headers.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    var header = headers[i]</span>
-<span class="cstat-no" title="statement not covered" >    if (header.substr(0, 8) === 'content-' &amp;&amp; header !== 'content-location') {</span>
-<span class="cstat-no" title="statement not covered" >      res.removeHeader(header)</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; headers.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    var header = headers[i]</span>
+<span class="cstat-no" title="statement not covered">    if (header.substr(0, 8) === 'content-' &amp;&amp; header !== 'content-location') {</span>
+<span class="cstat-no" title="statement not covered">      res.removeHeader(header)</span>
     }
   }
 }
@@ -2750,12 +2748,12 @@ SendStream.prototype.removeContentHeaderFields = <span class="fstat-no" title="f
  * @api private
  */
 &nbsp;
-SendStream.prototype.notModified = <span class="fstat-no" title="function not covered" >function notModified () {</span>
-<span class="cstat-no" title="statement not covered" >  var res = this.res</span>
-<span class="cstat-no" title="statement not covered" >  debug('not modified')</span>
-<span class="cstat-no" title="statement not covered" >  this.removeContentHeaderFields()</span>
-<span class="cstat-no" title="statement not covered" >  res.statusCode = 304</span>
-<span class="cstat-no" title="statement not covered" >  res.end()</span>
+SendStream.prototype.notModified = <span class="fstat-no" title="function not covered">function notModified () {</span>
+<span class="cstat-no" title="statement not covered">  var res = this.res</span>
+<span class="cstat-no" title="statement not covered">  debug('not modified')</span>
+<span class="cstat-no" title="statement not covered">  this.removeContentHeaderFields()</span>
+<span class="cstat-no" title="statement not covered">  res.statusCode = 304</span>
+<span class="cstat-no" title="statement not covered">  res.end()</span>
 }
 &nbsp;
 /**
@@ -2764,10 +2762,10 @@ SendStream.prototype.notModified = <span class="fstat-no" title="function not co
  * @api private
  */
 &nbsp;
-SendStream.prototype.headersAlreadySent = <span class="fstat-no" title="function not covered" >function headersAlreadySent () {</span>
-<span class="cstat-no" title="statement not covered" >  var err = new Error('Can\'t set headers after they are sent.')</span>
-<span class="cstat-no" title="statement not covered" >  debug('headers already sent')</span>
-<span class="cstat-no" title="statement not covered" >  this.error(500, err)</span>
+SendStream.prototype.headersAlreadySent = <span class="fstat-no" title="function not covered">function headersAlreadySent () {</span>
+<span class="cstat-no" title="statement not covered">  var err = new Error('Can\'t set headers after they are sent.')</span>
+<span class="cstat-no" title="statement not covered">  debug('headers already sent')</span>
+<span class="cstat-no" title="statement not covered">  this.error(500, err)</span>
 }
 &nbsp;
 /**
@@ -2778,9 +2776,9 @@ SendStream.prototype.headersAlreadySent = <span class="fstat-no" title="function
  * @api private
  */
 &nbsp;
-SendStream.prototype.isCachable = <span class="fstat-no" title="function not covered" >function isCachable () {</span>
-<span class="cstat-no" title="statement not covered" >  var statusCode = this.res.statusCode</span>
-<span class="cstat-no" title="statement not covered" >  return (statusCode &gt;= 200 &amp;&amp; statusCode &lt; 300) ||</span>
+SendStream.prototype.isCachable = <span class="fstat-no" title="function not covered">function isCachable () {</span>
+<span class="cstat-no" title="statement not covered">  var statusCode = this.res.statusCode</span>
+<span class="cstat-no" title="statement not covered">  return (statusCode &gt;= 200 &amp;&amp; statusCode &lt; 300) ||</span>
     statusCode === 304
 }
 &nbsp;
@@ -2791,16 +2789,16 @@ SendStream.prototype.isCachable = <span class="fstat-no" title="function not cov
  * @private
  */
 &nbsp;
-SendStream.prototype.onStatError = <span class="fstat-no" title="function not covered" >function onStatError (error) {</span>
-<span class="cstat-no" title="statement not covered" >  switch (error.code) {</span>
+SendStream.prototype.onStatError = <span class="fstat-no" title="function not covered">function onStatError (error) {</span>
+<span class="cstat-no" title="statement not covered">  switch (error.code) {</span>
     case 'ENAMETOOLONG':
     case 'ENOENT':
     case 'ENOTDIR':
-<span class="cstat-no" title="statement not covered" >      this.error(404, error)</span>
-<span class="cstat-no" title="statement not covered" >      break</span>
+<span class="cstat-no" title="statement not covered">      this.error(404, error)</span>
+<span class="cstat-no" title="statement not covered">      break</span>
     default:
-<span class="cstat-no" title="statement not covered" >      this.error(500, error)</span>
-<span class="cstat-no" title="statement not covered" >      break</span>
+<span class="cstat-no" title="statement not covered">      this.error(500, error)</span>
+<span class="cstat-no" title="statement not covered">      break</span>
   }
 }
 &nbsp;
@@ -2811,8 +2809,8 @@ SendStream.prototype.onStatError = <span class="fstat-no" title="function not co
  * @api private
  */
 &nbsp;
-SendStream.prototype.isFresh = <span class="fstat-no" title="function not covered" >function isFresh () {</span>
-<span class="cstat-no" title="statement not covered" >  return fresh(this.req.headers, {</span>
+SendStream.prototype.isFresh = <span class="fstat-no" title="function not covered">function isFresh () {</span>
+<span class="cstat-no" title="statement not covered">  return fresh(this.req.headers, {</span>
     'etag': this.res.getHeader('ETag'),
     'last-modified': this.res.getHeader('Last-Modified')
   })
@@ -2825,22 +2823,22 @@ SendStream.prototype.isFresh = <span class="fstat-no" title="function not covere
  * @api private
  */
 &nbsp;
-SendStream.prototype.isRangeFresh = <span class="fstat-no" title="function not covered" >function isRangeFresh () {</span>
-<span class="cstat-no" title="statement not covered" >  var ifRange = this.req.headers['if-range']</span>
+SendStream.prototype.isRangeFresh = <span class="fstat-no" title="function not covered">function isRangeFresh () {</span>
+<span class="cstat-no" title="statement not covered">  var ifRange = this.req.headers['if-range']</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!ifRange) {</span>
-<span class="cstat-no" title="statement not covered" >    return true</span>
+<span class="cstat-no" title="statement not covered">  if (!ifRange) {</span>
+<span class="cstat-no" title="statement not covered">    return true</span>
   }
 &nbsp;
   // if-range as etag
-<span class="cstat-no" title="statement not covered" >  if (ifRange.indexOf('"') !== -1) {</span>
-<span class="cstat-no" title="statement not covered" >    var etag = this.res.getHeader('ETag')</span>
-<span class="cstat-no" title="statement not covered" >    return Boolean(etag &amp;&amp; ifRange.indexOf(etag) !== -1)</span>
+<span class="cstat-no" title="statement not covered">  if (ifRange.indexOf('"') !== -1) {</span>
+<span class="cstat-no" title="statement not covered">    var etag = this.res.getHeader('ETag')</span>
+<span class="cstat-no" title="statement not covered">    return Boolean(etag &amp;&amp; ifRange.indexOf(etag) !== -1)</span>
   }
 &nbsp;
   // if-range as modified date
-<span class="cstat-no" title="statement not covered" >  var lastModified = this.res.getHeader('Last-Modified')</span>
-<span class="cstat-no" title="statement not covered" >  return parseHttpDate(lastModified) &lt;= parseHttpDate(ifRange)</span>
+<span class="cstat-no" title="statement not covered">  var lastModified = this.res.getHeader('Last-Modified')</span>
+<span class="cstat-no" title="statement not covered">  return parseHttpDate(lastModified) &lt;= parseHttpDate(ifRange)</span>
 }
 &nbsp;
 /**
@@ -2850,31 +2848,31 @@ SendStream.prototype.isRangeFresh = <span class="fstat-no" title="function not c
  * @private
  */
 &nbsp;
-SendStream.prototype.redirect = <span class="fstat-no" title="function not covered" >function redirect (path) {</span>
-<span class="cstat-no" title="statement not covered" >  var res = this.res</span>
+SendStream.prototype.redirect = <span class="fstat-no" title="function not covered">function redirect (path) {</span>
+<span class="cstat-no" title="statement not covered">  var res = this.res</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (listenerCount(this, 'directory') !== 0) {</span>
-<span class="cstat-no" title="statement not covered" >    this.emit('directory', res, path)</span>
-<span class="cstat-no" title="statement not covered" >    return</span>
+<span class="cstat-no" title="statement not covered">  if (listenerCount(this, 'directory') !== 0) {</span>
+<span class="cstat-no" title="statement not covered">    this.emit('directory', res, path)</span>
+<span class="cstat-no" title="statement not covered">    return</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (this.hasTrailingSlash()) {</span>
-<span class="cstat-no" title="statement not covered" >    this.error(403)</span>
-<span class="cstat-no" title="statement not covered" >    return</span>
+<span class="cstat-no" title="statement not covered">  if (this.hasTrailingSlash()) {</span>
+<span class="cstat-no" title="statement not covered">    this.error(403)</span>
+<span class="cstat-no" title="statement not covered">    return</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var loc = encodeUrl(collapseLeadingSlashes(this.path + '/'))</span>
-<span class="cstat-no" title="statement not covered" >  var doc = createHtmlDocument('Redirecting', 'Redirecting to &lt;a href="' + escapeHtml(loc) + '"&gt;' +</span>
+<span class="cstat-no" title="statement not covered">  var loc = encodeUrl(collapseLeadingSlashes(this.path + '/'))</span>
+<span class="cstat-no" title="statement not covered">  var doc = createHtmlDocument('Redirecting', 'Redirecting to &lt;a href="' + escapeHtml(loc) + '"&gt;' +</span>
     escapeHtml(loc) + '&lt;/a&gt;')
 &nbsp;
   // redirect
-<span class="cstat-no" title="statement not covered" >  res.statusCode = 301</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Type', 'text/html; charset=UTF-8')</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Length', Buffer.byteLength(doc))</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Security-Policy', "default-src 'self'")</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('X-Content-Type-Options', 'nosniff')</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('Location', loc)</span>
-<span class="cstat-no" title="statement not covered" >  res.end(doc)</span>
+<span class="cstat-no" title="statement not covered">  res.statusCode = 301</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Type', 'text/html; charset=UTF-8')</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Length', Buffer.byteLength(doc))</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Security-Policy', "default-src 'self'")</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('X-Content-Type-Options', 'nosniff')</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('Location', loc)</span>
+<span class="cstat-no" title="statement not covered">  res.end(doc)</span>
 }
 &nbsp;
 /**
@@ -2885,89 +2883,89 @@ SendStream.prototype.redirect = <span class="fstat-no" title="function not cover
  * @api public
  */
 &nbsp;
-SendStream.prototype.pipe = <span class="fstat-no" title="function not covered" >function pipe (res) {</span>
+SendStream.prototype.pipe = <span class="fstat-no" title="function not covered">function pipe (res) {</span>
   // root path
-<span class="cstat-no" title="statement not covered" >  var root = this._root</span>
+<span class="cstat-no" title="statement not covered">  var root = this._root</span>
 &nbsp;
   // references
-<span class="cstat-no" title="statement not covered" >  this.res = res</span>
+<span class="cstat-no" title="statement not covered">  this.res = res</span>
 &nbsp;
   // decode the path
-<span class="cstat-no" title="statement not covered" >  var path = decode(this.path)</span>
-<span class="cstat-no" title="statement not covered" >  if (path === -1) {</span>
-<span class="cstat-no" title="statement not covered" >    this.error(400)</span>
-<span class="cstat-no" title="statement not covered" >    return res</span>
+<span class="cstat-no" title="statement not covered">  var path = decode(this.path)</span>
+<span class="cstat-no" title="statement not covered">  if (path === -1) {</span>
+<span class="cstat-no" title="statement not covered">    this.error(400)</span>
+<span class="cstat-no" title="statement not covered">    return res</span>
   }
 &nbsp;
   // null byte(s)
-<span class="cstat-no" title="statement not covered" >  if (~path.indexOf('\0')) {</span>
-<span class="cstat-no" title="statement not covered" >    this.error(400)</span>
-<span class="cstat-no" title="statement not covered" >    return res</span>
+<span class="cstat-no" title="statement not covered">  if (~path.indexOf('\0')) {</span>
+<span class="cstat-no" title="statement not covered">    this.error(400)</span>
+<span class="cstat-no" title="statement not covered">    return res</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var parts</span>
-<span class="cstat-no" title="statement not covered" >  if (root !== null) {</span>
+<span class="cstat-no" title="statement not covered">  var parts</span>
+<span class="cstat-no" title="statement not covered">  if (root !== null) {</span>
     // malicious path
-<span class="cstat-no" title="statement not covered" >    if (UP_PATH_REGEXP.test(normalize('.' + sep + path))) {</span>
-<span class="cstat-no" title="statement not covered" >      debug('malicious path "%s"', path)</span>
-<span class="cstat-no" title="statement not covered" >      this.error(403)</span>
-<span class="cstat-no" title="statement not covered" >      return res</span>
+<span class="cstat-no" title="statement not covered">    if (UP_PATH_REGEXP.test(normalize('.' + sep + path))) {</span>
+<span class="cstat-no" title="statement not covered">      debug('malicious path "%s"', path)</span>
+<span class="cstat-no" title="statement not covered">      this.error(403)</span>
+<span class="cstat-no" title="statement not covered">      return res</span>
     }
 &nbsp;
     // join / normalize from optional root dir
-<span class="cstat-no" title="statement not covered" >    path = normalize(join(root, path))</span>
-<span class="cstat-no" title="statement not covered" >    root = normalize(root + sep)</span>
+<span class="cstat-no" title="statement not covered">    path = normalize(join(root, path))</span>
+<span class="cstat-no" title="statement not covered">    root = normalize(root + sep)</span>
 &nbsp;
     // explode path parts
-<span class="cstat-no" title="statement not covered" >    parts = path.substr(root.length).split(sep)</span>
+<span class="cstat-no" title="statement not covered">    parts = path.substr(root.length).split(sep)</span>
   } else {
     // ".." is malicious without "root"
-<span class="cstat-no" title="statement not covered" >    if (UP_PATH_REGEXP.test(path)) {</span>
-<span class="cstat-no" title="statement not covered" >      debug('malicious path "%s"', path)</span>
-<span class="cstat-no" title="statement not covered" >      this.error(403)</span>
-<span class="cstat-no" title="statement not covered" >      return res</span>
+<span class="cstat-no" title="statement not covered">    if (UP_PATH_REGEXP.test(path)) {</span>
+<span class="cstat-no" title="statement not covered">      debug('malicious path "%s"', path)</span>
+<span class="cstat-no" title="statement not covered">      this.error(403)</span>
+<span class="cstat-no" title="statement not covered">      return res</span>
     }
 &nbsp;
     // explode path parts
-<span class="cstat-no" title="statement not covered" >    parts = normalize(path).split(sep)</span>
+<span class="cstat-no" title="statement not covered">    parts = normalize(path).split(sep)</span>
 &nbsp;
     // resolve the path
-<span class="cstat-no" title="statement not covered" >    path = resolve(path)</span>
+<span class="cstat-no" title="statement not covered">    path = resolve(path)</span>
   }
 &nbsp;
   // dotfile handling
-<span class="cstat-no" title="statement not covered" >  if (containsDotFile(parts)) {</span>
-<span class="cstat-no" title="statement not covered" >    var access = this._dotfiles</span>
+<span class="cstat-no" title="statement not covered">  if (containsDotFile(parts)) {</span>
+<span class="cstat-no" title="statement not covered">    var access = this._dotfiles</span>
 &nbsp;
     // legacy support
-<span class="cstat-no" title="statement not covered" >    if (access === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >      access = parts[parts.length - 1][0] === '.'</span>
+<span class="cstat-no" title="statement not covered">    if (access === undefined) {</span>
+<span class="cstat-no" title="statement not covered">      access = parts[parts.length - 1][0] === '.'</span>
         ? (this._hidden ? 'allow' : 'ignore')
         : 'allow'
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    debug('%s dotfile "%s"', access, path)</span>
-<span class="cstat-no" title="statement not covered" >    switch (access) {</span>
+<span class="cstat-no" title="statement not covered">    debug('%s dotfile "%s"', access, path)</span>
+<span class="cstat-no" title="statement not covered">    switch (access) {</span>
       case 'allow':
-<span class="cstat-no" title="statement not covered" >        break</span>
+<span class="cstat-no" title="statement not covered">        break</span>
       case 'deny':
-<span class="cstat-no" title="statement not covered" >        this.error(403)</span>
-<span class="cstat-no" title="statement not covered" >        return res</span>
+<span class="cstat-no" title="statement not covered">        this.error(403)</span>
+<span class="cstat-no" title="statement not covered">        return res</span>
       case 'ignore':
       default:
-<span class="cstat-no" title="statement not covered" >        this.error(404)</span>
-<span class="cstat-no" title="statement not covered" >        return res</span>
+<span class="cstat-no" title="statement not covered">        this.error(404)</span>
+<span class="cstat-no" title="statement not covered">        return res</span>
     }
   }
 &nbsp;
   // index file support
-<span class="cstat-no" title="statement not covered" >  if (this._index.length &amp;&amp; this.hasTrailingSlash()) {</span>
-<span class="cstat-no" title="statement not covered" >    this.sendIndex(path)</span>
-<span class="cstat-no" title="statement not covered" >    return res</span>
+<span class="cstat-no" title="statement not covered">  if (this._index.length &amp;&amp; this.hasTrailingSlash()) {</span>
+<span class="cstat-no" title="statement not covered">    this.sendIndex(path)</span>
+<span class="cstat-no" title="statement not covered">    return res</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.sendFile(path)</span>
-<span class="cstat-no" title="statement not covered" >  return res</span>
+<span class="cstat-no" title="statement not covered">  this.sendFile(path)</span>
+<span class="cstat-no" title="statement not covered">  return res</span>
 }
 &nbsp;
 /**
@@ -2977,108 +2975,108 @@ SendStream.prototype.pipe = <span class="fstat-no" title="function not covered" 
  * @api public
  */
 &nbsp;
-SendStream.prototype.send = <span class="fstat-no" title="function not covered" >function send (path, stat) {</span>
-<span class="cstat-no" title="statement not covered" >  var len = stat.size</span>
-<span class="cstat-no" title="statement not covered" >  var options = this.options</span>
-<span class="cstat-no" title="statement not covered" >  var opts = {}</span>
-<span class="cstat-no" title="statement not covered" >  var res = this.res</span>
-<span class="cstat-no" title="statement not covered" >  var req = this.req</span>
-<span class="cstat-no" title="statement not covered" >  var ranges = req.headers.range</span>
-<span class="cstat-no" title="statement not covered" >  var offset = options.start || 0</span>
+SendStream.prototype.send = <span class="fstat-no" title="function not covered">function send (path, stat) {</span>
+<span class="cstat-no" title="statement not covered">  var len = stat.size</span>
+<span class="cstat-no" title="statement not covered">  var options = this.options</span>
+<span class="cstat-no" title="statement not covered">  var opts = {}</span>
+<span class="cstat-no" title="statement not covered">  var res = this.res</span>
+<span class="cstat-no" title="statement not covered">  var req = this.req</span>
+<span class="cstat-no" title="statement not covered">  var ranges = req.headers.range</span>
+<span class="cstat-no" title="statement not covered">  var offset = options.start || 0</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (headersSent(res)) {</span>
+<span class="cstat-no" title="statement not covered">  if (headersSent(res)) {</span>
     // impossible to send now
-<span class="cstat-no" title="statement not covered" >    this.headersAlreadySent()</span>
-<span class="cstat-no" title="statement not covered" >    return</span>
+<span class="cstat-no" title="statement not covered">    this.headersAlreadySent()</span>
+<span class="cstat-no" title="statement not covered">    return</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  debug('pipe "%s"', path)</span>
+<span class="cstat-no" title="statement not covered">  debug('pipe "%s"', path)</span>
 &nbsp;
   // set header fields
-<span class="cstat-no" title="statement not covered" >  this.setHeader(path, stat)</span>
+<span class="cstat-no" title="statement not covered">  this.setHeader(path, stat)</span>
 &nbsp;
   // set content-type
-<span class="cstat-no" title="statement not covered" >  this.type(path)</span>
+<span class="cstat-no" title="statement not covered">  this.type(path)</span>
 &nbsp;
   // conditional GET support
-<span class="cstat-no" title="statement not covered" >  if (this.isConditionalGET()) {</span>
-<span class="cstat-no" title="statement not covered" >    if (this.isPreconditionFailure()) {</span>
-<span class="cstat-no" title="statement not covered" >      this.error(412)</span>
-<span class="cstat-no" title="statement not covered" >      return</span>
+<span class="cstat-no" title="statement not covered">  if (this.isConditionalGET()) {</span>
+<span class="cstat-no" title="statement not covered">    if (this.isPreconditionFailure()) {</span>
+<span class="cstat-no" title="statement not covered">      this.error(412)</span>
+<span class="cstat-no" title="statement not covered">      return</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (this.isCachable() &amp;&amp; this.isFresh()) {</span>
-<span class="cstat-no" title="statement not covered" >      this.notModified()</span>
-<span class="cstat-no" title="statement not covered" >      return</span>
+<span class="cstat-no" title="statement not covered">    if (this.isCachable() &amp;&amp; this.isFresh()) {</span>
+<span class="cstat-no" title="statement not covered">      this.notModified()</span>
+<span class="cstat-no" title="statement not covered">      return</span>
     }
   }
 &nbsp;
   // adjust len to start/end options
-<span class="cstat-no" title="statement not covered" >  len = Math.max(0, len - offset)</span>
-<span class="cstat-no" title="statement not covered" >  if (options.end !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >    var bytes = options.end - offset + 1</span>
-<span class="cstat-no" title="statement not covered" >    if (len &gt; bytes) <span class="cstat-no" title="statement not covered" >len = bytes</span></span>
+<span class="cstat-no" title="statement not covered">  len = Math.max(0, len - offset)</span>
+<span class="cstat-no" title="statement not covered">  if (options.end !== undefined) {</span>
+<span class="cstat-no" title="statement not covered">    var bytes = options.end - offset + 1</span>
+<span class="cstat-no" title="statement not covered">    if (len &gt; bytes) <span class="cstat-no" title="statement not covered">len = bytes</span></span>
   }
 &nbsp;
   // Range support
-<span class="cstat-no" title="statement not covered" >  if (this._acceptRanges &amp;&amp; BYTES_RANGE_REGEXP.test(ranges)) {</span>
+<span class="cstat-no" title="statement not covered">  if (this._acceptRanges &amp;&amp; BYTES_RANGE_REGEXP.test(ranges)) {</span>
     // parse
-<span class="cstat-no" title="statement not covered" >    ranges = parseRange(len, ranges, {</span>
+<span class="cstat-no" title="statement not covered">    ranges = parseRange(len, ranges, {</span>
       combine: true
     })
 &nbsp;
     // If-Range support
-<span class="cstat-no" title="statement not covered" >    if (!this.isRangeFresh()) {</span>
-<span class="cstat-no" title="statement not covered" >      debug('range stale')</span>
-<span class="cstat-no" title="statement not covered" >      ranges = -2</span>
+<span class="cstat-no" title="statement not covered">    if (!this.isRangeFresh()) {</span>
+<span class="cstat-no" title="statement not covered">      debug('range stale')</span>
+<span class="cstat-no" title="statement not covered">      ranges = -2</span>
     }
 &nbsp;
     // unsatisfiable
-<span class="cstat-no" title="statement not covered" >    if (ranges === -1) {</span>
-<span class="cstat-no" title="statement not covered" >      debug('range unsatisfiable')</span>
+<span class="cstat-no" title="statement not covered">    if (ranges === -1) {</span>
+<span class="cstat-no" title="statement not covered">      debug('range unsatisfiable')</span>
 &nbsp;
       // Content-Range
-<span class="cstat-no" title="statement not covered" >      res.setHeader('Content-Range', contentRange('bytes', len))</span>
+<span class="cstat-no" title="statement not covered">      res.setHeader('Content-Range', contentRange('bytes', len))</span>
 &nbsp;
       // 416 Requested Range Not Satisfiable
-<span class="cstat-no" title="statement not covered" >      return this.error(416, {</span>
+<span class="cstat-no" title="statement not covered">      return this.error(416, {</span>
         headers: {'Content-Range': res.getHeader('Content-Range')}
       })
     }
 &nbsp;
     // valid (syntactically invalid/multiple ranges are treated as a regular response)
-<span class="cstat-no" title="statement not covered" >    if (ranges !== -2 &amp;&amp; ranges.length === 1) {</span>
-<span class="cstat-no" title="statement not covered" >      debug('range %j', ranges)</span>
+<span class="cstat-no" title="statement not covered">    if (ranges !== -2 &amp;&amp; ranges.length === 1) {</span>
+<span class="cstat-no" title="statement not covered">      debug('range %j', ranges)</span>
 &nbsp;
       // Content-Range
-<span class="cstat-no" title="statement not covered" >      res.statusCode = 206</span>
-<span class="cstat-no" title="statement not covered" >      res.setHeader('Content-Range', contentRange('bytes', len, ranges[0]))</span>
+<span class="cstat-no" title="statement not covered">      res.statusCode = 206</span>
+<span class="cstat-no" title="statement not covered">      res.setHeader('Content-Range', contentRange('bytes', len, ranges[0]))</span>
 &nbsp;
       // adjust for requested range
-<span class="cstat-no" title="statement not covered" >      offset += ranges[0].start</span>
-<span class="cstat-no" title="statement not covered" >      len = ranges[0].end - ranges[0].start + 1</span>
+<span class="cstat-no" title="statement not covered">      offset += ranges[0].start</span>
+<span class="cstat-no" title="statement not covered">      len = ranges[0].end - ranges[0].start + 1</span>
     }
   }
 &nbsp;
   // clone options
-<span class="cstat-no" title="statement not covered" >  for (var prop in options) {</span>
-<span class="cstat-no" title="statement not covered" >    opts[prop] = options[prop]</span>
+<span class="cstat-no" title="statement not covered">  for (var prop in options) {</span>
+<span class="cstat-no" title="statement not covered">    opts[prop] = options[prop]</span>
   }
 &nbsp;
   // set read options
-<span class="cstat-no" title="statement not covered" >  opts.start = offset</span>
-<span class="cstat-no" title="statement not covered" >  opts.end = Math.max(offset, offset + len - 1)</span>
+<span class="cstat-no" title="statement not covered">  opts.start = offset</span>
+<span class="cstat-no" title="statement not covered">  opts.end = Math.max(offset, offset + len - 1)</span>
 &nbsp;
   // content-length
-<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Length', len)</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Length', len)</span>
 &nbsp;
   // HEAD support
-<span class="cstat-no" title="statement not covered" >  if (req.method === 'HEAD') {</span>
-<span class="cstat-no" title="statement not covered" >    res.end()</span>
-<span class="cstat-no" title="statement not covered" >    return</span>
+<span class="cstat-no" title="statement not covered">  if (req.method === 'HEAD') {</span>
+<span class="cstat-no" title="statement not covered">    res.end()</span>
+<span class="cstat-no" title="statement not covered">    return</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.stream(path, opts)</span>
+<span class="cstat-no" title="statement not covered">  this.stream(path, opts)</span>
 }
 &nbsp;
 /**
@@ -3087,37 +3085,37 @@ SendStream.prototype.send = <span class="fstat-no" title="function not covered" 
  * @param {String} path
  * @api private
  */
-SendStream.prototype.sendFile = <span class="fstat-no" title="function not covered" >function sendFile (path) {</span>
-<span class="cstat-no" title="statement not covered" >  var i = 0</span>
-<span class="cstat-no" title="statement not covered" >  var self = this</span>
+SendStream.prototype.sendFile = <span class="fstat-no" title="function not covered">function sendFile (path) {</span>
+<span class="cstat-no" title="statement not covered">  var i = 0</span>
+<span class="cstat-no" title="statement not covered">  var self = this</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  debug('stat "%s"', path)</span>
-<span class="cstat-no" title="statement not covered" >  fs.stat(path, <span class="fstat-no" title="function not covered" >function onstat (err, stat) {</span></span>
-<span class="cstat-no" title="statement not covered" >    if (err &amp;&amp; err.code === 'ENOENT' &amp;&amp; !extname(path) &amp;&amp; path[path.length - 1] !== sep) {</span>
+<span class="cstat-no" title="statement not covered">  debug('stat "%s"', path)</span>
+<span class="cstat-no" title="statement not covered">  fs.stat(path, <span class="fstat-no" title="function not covered">function onstat (err, stat) {</span></span>
+<span class="cstat-no" title="statement not covered">    if (err &amp;&amp; err.code === 'ENOENT' &amp;&amp; !extname(path) &amp;&amp; path[path.length - 1] !== sep) {</span>
       // not found, check extensions
-<span class="cstat-no" title="statement not covered" >      return next(err)</span>
+<span class="cstat-no" title="statement not covered">      return next(err)</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (err) <span class="cstat-no" title="statement not covered" >return self.onStatError(err)</span></span>
-<span class="cstat-no" title="statement not covered" >    if (stat.isDirectory()) <span class="cstat-no" title="statement not covered" >return self.redirect(path)</span></span>
-<span class="cstat-no" title="statement not covered" >    self.emit('file', path, stat)</span>
-<span class="cstat-no" title="statement not covered" >    self.send(path, stat)</span>
+<span class="cstat-no" title="statement not covered">    if (err) <span class="cstat-no" title="statement not covered">return self.onStatError(err)</span></span>
+<span class="cstat-no" title="statement not covered">    if (stat.isDirectory()) <span class="cstat-no" title="statement not covered">return self.redirect(path)</span></span>
+<span class="cstat-no" title="statement not covered">    self.emit('file', path, stat)</span>
+<span class="cstat-no" title="statement not covered">    self.send(path, stat)</span>
   })
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function next (err) {</span>
-<span class="cstat-no" title="statement not covered" >    if (self._extensions.length &lt;= i) {</span>
-<span class="cstat-no" title="statement not covered" >      return err</span>
+<span class="fstat-no" title="function not covered">  function next (err) {</span>
+<span class="cstat-no" title="statement not covered">    if (self._extensions.length &lt;= i) {</span>
+<span class="cstat-no" title="statement not covered">      return err</span>
         ? self.onStatError(err)
         : self.error(404)
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var p = path + '.' + self._extensions[i++]</span>
+<span class="cstat-no" title="statement not covered">    var p = path + '.' + self._extensions[i++]</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    debug('stat "%s"', p)</span>
-<span class="cstat-no" title="statement not covered" >    fs.stat(p, <span class="fstat-no" title="function not covered" >function (err, stat) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) <span class="cstat-no" title="statement not covered" >return next(err)</span></span>
-<span class="cstat-no" title="statement not covered" >      if (stat.isDirectory()) <span class="cstat-no" title="statement not covered" >return next()</span></span>
-<span class="cstat-no" title="statement not covered" >      self.emit('file', p, stat)</span>
-<span class="cstat-no" title="statement not covered" >      self.send(p, stat)</span>
+<span class="cstat-no" title="statement not covered">    debug('stat "%s"', p)</span>
+<span class="cstat-no" title="statement not covered">    fs.stat(p, <span class="fstat-no" title="function not covered">function (err, stat) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) <span class="cstat-no" title="statement not covered">return next(err)</span></span>
+<span class="cstat-no" title="statement not covered">      if (stat.isDirectory()) <span class="cstat-no" title="statement not covered">return next()</span></span>
+<span class="cstat-no" title="statement not covered">      self.emit('file', p, stat)</span>
+<span class="cstat-no" title="statement not covered">      self.send(p, stat)</span>
     })
   }
 }
@@ -3128,28 +3126,28 @@ SendStream.prototype.sendFile = <span class="fstat-no" title="function not cover
  * @param {String} path
  * @api private
  */
-SendStream.prototype.sendIndex = <span class="fstat-no" title="function not covered" >function sendIndex (path) {</span>
-<span class="cstat-no" title="statement not covered" >  var i = -1</span>
-<span class="cstat-no" title="statement not covered" >  var self = this</span>
+SendStream.prototype.sendIndex = <span class="fstat-no" title="function not covered">function sendIndex (path) {</span>
+<span class="cstat-no" title="statement not covered">  var i = -1</span>
+<span class="cstat-no" title="statement not covered">  var self = this</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function next (err) {</span>
-<span class="cstat-no" title="statement not covered" >    if (++i &gt;= self._index.length) {</span>
-<span class="cstat-no" title="statement not covered" >      if (err) <span class="cstat-no" title="statement not covered" >return self.onStatError(err)</span></span>
-<span class="cstat-no" title="statement not covered" >      return self.error(404)</span>
+<span class="fstat-no" title="function not covered">  function next (err) {</span>
+<span class="cstat-no" title="statement not covered">    if (++i &gt;= self._index.length) {</span>
+<span class="cstat-no" title="statement not covered">      if (err) <span class="cstat-no" title="statement not covered">return self.onStatError(err)</span></span>
+<span class="cstat-no" title="statement not covered">      return self.error(404)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var p = join(path, self._index[i])</span>
+<span class="cstat-no" title="statement not covered">    var p = join(path, self._index[i])</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    debug('stat "%s"', p)</span>
-<span class="cstat-no" title="statement not covered" >    fs.stat(p, <span class="fstat-no" title="function not covered" >function (err, stat) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) <span class="cstat-no" title="statement not covered" >return next(err)</span></span>
-<span class="cstat-no" title="statement not covered" >      if (stat.isDirectory()) <span class="cstat-no" title="statement not covered" >return next()</span></span>
-<span class="cstat-no" title="statement not covered" >      self.emit('file', p, stat)</span>
-<span class="cstat-no" title="statement not covered" >      self.send(p, stat)</span>
+<span class="cstat-no" title="statement not covered">    debug('stat "%s"', p)</span>
+<span class="cstat-no" title="statement not covered">    fs.stat(p, <span class="fstat-no" title="function not covered">function (err, stat) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) <span class="cstat-no" title="statement not covered">return next(err)</span></span>
+<span class="cstat-no" title="statement not covered">      if (stat.isDirectory()) <span class="cstat-no" title="statement not covered">return next()</span></span>
+<span class="cstat-no" title="statement not covered">      self.emit('file', p, stat)</span>
+<span class="cstat-no" title="statement not covered">      self.send(p, stat)</span>
     })
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  next()</span>
+<span class="cstat-no" title="statement not covered">  next()</span>
 }
 &nbsp;
 /**
@@ -3160,39 +3158,39 @@ SendStream.prototype.sendIndex = <span class="fstat-no" title="function not cove
  * @api private
  */
 &nbsp;
-SendStream.prototype.stream = <span class="fstat-no" title="function not covered" >function stream (path, options) {</span>
+SendStream.prototype.stream = <span class="fstat-no" title="function not covered">function stream (path, options) {</span>
   // TODO: this is all lame, refactor meeee
-<span class="cstat-no" title="statement not covered" >  var finished = false</span>
-<span class="cstat-no" title="statement not covered" >  var self = this</span>
-<span class="cstat-no" title="statement not covered" >  var res = this.res</span>
+<span class="cstat-no" title="statement not covered">  var finished = false</span>
+<span class="cstat-no" title="statement not covered">  var self = this</span>
+<span class="cstat-no" title="statement not covered">  var res = this.res</span>
 &nbsp;
   // pipe
-<span class="cstat-no" title="statement not covered" >  var stream = fs.createReadStream(path, options)</span>
-<span class="cstat-no" title="statement not covered" >  this.emit('stream', stream)</span>
-<span class="cstat-no" title="statement not covered" >  stream.pipe(res)</span>
+<span class="cstat-no" title="statement not covered">  var stream = fs.createReadStream(path, options)</span>
+<span class="cstat-no" title="statement not covered">  this.emit('stream', stream)</span>
+<span class="cstat-no" title="statement not covered">  stream.pipe(res)</span>
 &nbsp;
   // response finished, done with the fd
-<span class="cstat-no" title="statement not covered" >  onFinished(res, <span class="fstat-no" title="function not covered" >function onfinished () {</span></span>
-<span class="cstat-no" title="statement not covered" >    finished = true</span>
-<span class="cstat-no" title="statement not covered" >    destroy(stream)</span>
+<span class="cstat-no" title="statement not covered">  onFinished(res, <span class="fstat-no" title="function not covered">function onfinished () {</span></span>
+<span class="cstat-no" title="statement not covered">    finished = true</span>
+<span class="cstat-no" title="statement not covered">    destroy(stream)</span>
   })
 &nbsp;
   // error handling code-smell
-<span class="cstat-no" title="statement not covered" >  stream.on('error', <span class="fstat-no" title="function not covered" >function onerror (err) {</span></span>
+<span class="cstat-no" title="statement not covered">  stream.on('error', <span class="fstat-no" title="function not covered">function onerror (err) {</span></span>
     // request already finished
-<span class="cstat-no" title="statement not covered" >    if (finished) <span class="cstat-no" title="statement not covered" >return</span></span>
+<span class="cstat-no" title="statement not covered">    if (finished) <span class="cstat-no" title="statement not covered">return</span></span>
 &nbsp;
     // clean up stream
-<span class="cstat-no" title="statement not covered" >    finished = true</span>
-<span class="cstat-no" title="statement not covered" >    destroy(stream)</span>
+<span class="cstat-no" title="statement not covered">    finished = true</span>
+<span class="cstat-no" title="statement not covered">    destroy(stream)</span>
 &nbsp;
     // error
-<span class="cstat-no" title="statement not covered" >    self.onStatError(err)</span>
+<span class="cstat-no" title="statement not covered">    self.onStatError(err)</span>
   })
 &nbsp;
   // end
-<span class="cstat-no" title="statement not covered" >  stream.on('end', <span class="fstat-no" title="function not covered" >function onend () {</span></span>
-<span class="cstat-no" title="statement not covered" >    self.emit('end')</span>
+<span class="cstat-no" title="statement not covered">  stream.on('end', <span class="fstat-no" title="function not covered">function onend () {</span></span>
+<span class="cstat-no" title="statement not covered">    self.emit('end')</span>
   })
 }
 &nbsp;
@@ -3204,22 +3202,22 @@ SendStream.prototype.stream = <span class="fstat-no" title="function not covered
  * @api private
  */
 &nbsp;
-SendStream.prototype.type = <span class="fstat-no" title="function not covered" >function type (path) {</span>
-<span class="cstat-no" title="statement not covered" >  var res = this.res</span>
+SendStream.prototype.type = <span class="fstat-no" title="function not covered">function type (path) {</span>
+<span class="cstat-no" title="statement not covered">  var res = this.res</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (res.getHeader('Content-Type')) <span class="cstat-no" title="statement not covered" >return</span></span>
+<span class="cstat-no" title="statement not covered">  if (res.getHeader('Content-Type')) <span class="cstat-no" title="statement not covered">return</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var type = mime.lookup(path)</span>
+<span class="cstat-no" title="statement not covered">  var type = mime.lookup(path)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!type) {</span>
-<span class="cstat-no" title="statement not covered" >    debug('no content-type')</span>
-<span class="cstat-no" title="statement not covered" >    return</span>
+<span class="cstat-no" title="statement not covered">  if (!type) {</span>
+<span class="cstat-no" title="statement not covered">    debug('no content-type')</span>
+<span class="cstat-no" title="statement not covered">    return</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var charset = mime.charsets.lookup(type)</span>
+<span class="cstat-no" title="statement not covered">  var charset = mime.charsets.lookup(type)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  debug('content-type %s', type)</span>
-<span class="cstat-no" title="statement not covered" >  res.setHeader('Content-Type', type + (charset ? '; charset=' + charset : ''))</span>
+<span class="cstat-no" title="statement not covered">  debug('content-type %s', type)</span>
+<span class="cstat-no" title="statement not covered">  res.setHeader('Content-Type', type + (charset ? '; charset=' + charset : ''))</span>
 }
 &nbsp;
 /**
@@ -3231,32 +3229,32 @@ SendStream.prototype.type = <span class="fstat-no" title="function not covered" 
  * @api private
  */
 &nbsp;
-SendStream.prototype.setHeader = <span class="fstat-no" title="function not covered" >function setHeader (path, stat) {</span>
-<span class="cstat-no" title="statement not covered" >  var res = this.res</span>
+SendStream.prototype.setHeader = <span class="fstat-no" title="function not covered">function setHeader (path, stat) {</span>
+<span class="cstat-no" title="statement not covered">  var res = this.res</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.emit('headers', res, path, stat)</span>
+<span class="cstat-no" title="statement not covered">  this.emit('headers', res, path, stat)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (this._acceptRanges &amp;&amp; !res.getHeader('Accept-Ranges')) {</span>
-<span class="cstat-no" title="statement not covered" >    debug('accept ranges')</span>
-<span class="cstat-no" title="statement not covered" >    res.setHeader('Accept-Ranges', 'bytes')</span>
+<span class="cstat-no" title="statement not covered">  if (this._acceptRanges &amp;&amp; !res.getHeader('Accept-Ranges')) {</span>
+<span class="cstat-no" title="statement not covered">    debug('accept ranges')</span>
+<span class="cstat-no" title="statement not covered">    res.setHeader('Accept-Ranges', 'bytes')</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (this._cacheControl &amp;&amp; !res.getHeader('Cache-Control')) {</span>
-<span class="cstat-no" title="statement not covered" >    var cacheControl = 'public, max-age=' + Math.floor(this._maxage / 1000)</span>
-<span class="cstat-no" title="statement not covered" >    debug('cache-control %s', cacheControl)</span>
-<span class="cstat-no" title="statement not covered" >    res.setHeader('Cache-Control', cacheControl)</span>
+<span class="cstat-no" title="statement not covered">  if (this._cacheControl &amp;&amp; !res.getHeader('Cache-Control')) {</span>
+<span class="cstat-no" title="statement not covered">    var cacheControl = 'public, max-age=' + Math.floor(this._maxage / 1000)</span>
+<span class="cstat-no" title="statement not covered">    debug('cache-control %s', cacheControl)</span>
+<span class="cstat-no" title="statement not covered">    res.setHeader('Cache-Control', cacheControl)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (this._lastModified &amp;&amp; !res.getHeader('Last-Modified')) {</span>
-<span class="cstat-no" title="statement not covered" >    var modified = stat.mtime.toUTCString()</span>
-<span class="cstat-no" title="statement not covered" >    debug('modified %s', modified)</span>
-<span class="cstat-no" title="statement not covered" >    res.setHeader('Last-Modified', modified)</span>
+<span class="cstat-no" title="statement not covered">  if (this._lastModified &amp;&amp; !res.getHeader('Last-Modified')) {</span>
+<span class="cstat-no" title="statement not covered">    var modified = stat.mtime.toUTCString()</span>
+<span class="cstat-no" title="statement not covered">    debug('modified %s', modified)</span>
+<span class="cstat-no" title="statement not covered">    res.setHeader('Last-Modified', modified)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (this._etag &amp;&amp; !res.getHeader('ETag')) {</span>
-<span class="cstat-no" title="statement not covered" >    var val = etag(stat)</span>
-<span class="cstat-no" title="statement not covered" >    debug('etag %s', val)</span>
-<span class="cstat-no" title="statement not covered" >    res.setHeader('ETag', val)</span>
+<span class="cstat-no" title="statement not covered">  if (this._etag &amp;&amp; !res.getHeader('ETag')) {</span>
+<span class="cstat-no" title="statement not covered">    var val = etag(stat)</span>
+<span class="cstat-no" title="statement not covered">    debug('etag %s', val)</span>
+<span class="cstat-no" title="statement not covered">    res.setHeader('ETag', val)</span>
   }
 }
 &nbsp;
@@ -3267,11 +3265,11 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function clearHeaders (res) {</span>
-<span class="cstat-no" title="statement not covered" >  var headers = getHeaderNames(res)</span>
+<span class="fstat-no" title="function not covered">function clearHeaders (res) {</span>
+<span class="cstat-no" title="statement not covered">  var headers = getHeaderNames(res)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; headers.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    res.removeHeader(headers[i])</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; headers.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    res.removeHeader(headers[i])</span>
   }
 }
 &nbsp;
@@ -3281,14 +3279,14 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @param {string} str
  * @private
  */
-<span class="fstat-no" title="function not covered" >function collapseLeadingSlashes (str) {</span>
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; str.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    if (str[i] !== '/') {</span>
-<span class="cstat-no" title="statement not covered" >      break</span>
+<span class="fstat-no" title="function not covered">function collapseLeadingSlashes (str) {</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; str.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    if (str[i] !== '/') {</span>
+<span class="cstat-no" title="statement not covered">      break</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return i &gt; 1</span>
+<span class="cstat-no" title="statement not covered">  return i &gt; 1</span>
     ? '/' + str.substr(i)
     : str
 }
@@ -3299,14 +3297,14 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @api private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function containsDotFile (parts) {</span>
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; parts.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    if (parts[i][0] === '.') {</span>
-<span class="cstat-no" title="statement not covered" >      return true</span>
+<span class="fstat-no" title="function not covered">function containsDotFile (parts) {</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; parts.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    if (parts[i][0] === '.') {</span>
+<span class="cstat-no" title="statement not covered">      return true</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return false</span>
+<span class="cstat-no" title="statement not covered">  return false</span>
 }
 &nbsp;
 /**
@@ -3317,8 +3315,8 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @param {array} [range]
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function contentRange (type, size, range) {</span>
-<span class="cstat-no" title="statement not covered" >  return type + ' ' + (range ? range.start + '-' + range.end : '*') + '/' + size</span>
+<span class="fstat-no" title="function not covered">function contentRange (type, size, range) {</span>
+<span class="cstat-no" title="statement not covered">  return type + ' ' + (range ? range.start + '-' + range.end : '*') + '/' + size</span>
 }
 &nbsp;
 /**
@@ -3329,8 +3327,8 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function createHtmlDocument (title, body) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;!DOCTYPE html&gt;\n' +</span>
+<span class="fstat-no" title="function not covered">function createHtmlDocument (title, body) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;!DOCTYPE html&gt;\n' +</span>
     '&lt;html lang="en"&gt;\n' +
     '&lt;head&gt;\n' +
     '&lt;meta charset="utf-8"&gt;\n' +
@@ -3351,11 +3349,11 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @api private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function decode (path) {</span>
-<span class="cstat-no" title="statement not covered" >  try {</span>
-<span class="cstat-no" title="statement not covered" >    return decodeURIComponent(path)</span>
+<span class="fstat-no" title="function not covered">function decode (path) {</span>
+<span class="cstat-no" title="statement not covered">  try {</span>
+<span class="cstat-no" title="statement not covered">    return decodeURIComponent(path)</span>
   } catch (err) {
-<span class="cstat-no" title="statement not covered" >    return -1</span>
+<span class="cstat-no" title="statement not covered">    return -1</span>
   }
 }
 &nbsp;
@@ -3367,8 +3365,8 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getHeaderNames (res) {</span>
-<span class="cstat-no" title="statement not covered" >  return typeof res.getHeaderNames !== 'function'</span>
+<span class="fstat-no" title="function not covered">function getHeaderNames (res) {</span>
+<span class="cstat-no" title="statement not covered">  return typeof res.getHeaderNames !== 'function'</span>
     ? Object.keys(res._headers || {})
     : res.getHeaderNames()
 }
@@ -3381,8 +3379,8 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function headersSent (res) {</span>
-<span class="cstat-no" title="statement not covered" >  return typeof res.headersSent !== 'boolean'</span>
+<span class="fstat-no" title="function not covered">function headersSent (res) {</span>
+<span class="cstat-no" title="statement not covered">  return typeof res.headersSent !== 'boolean'</span>
     ? Boolean(res._header)
     : res.headersSent
 }
@@ -3395,16 +3393,16 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function normalizeList (val, name) {</span>
-<span class="cstat-no" title="statement not covered" >  var list = [].concat(val || [])</span>
+<span class="fstat-no" title="function not covered">function normalizeList (val, name) {</span>
+<span class="cstat-no" title="statement not covered">  var list = [].concat(val || [])</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; list.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof list[i] !== 'string') {</span>
-<span class="cstat-no" title="statement not covered" >      throw new TypeError(name + ' must be array of strings or false')</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; list.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    if (typeof list[i] !== 'string') {</span>
+<span class="cstat-no" title="statement not covered">      throw new TypeError(name + ' must be array of strings or false')</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return list</span>
+<span class="cstat-no" title="statement not covered">  return list</span>
 }
 &nbsp;
 /**
@@ -3414,10 +3412,10 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function parseHttpDate (date) {</span>
-<span class="cstat-no" title="statement not covered" >  var timestamp = date &amp;&amp; Date.parse(date)</span>
+<span class="fstat-no" title="function not covered">function parseHttpDate (date) {</span>
+<span class="cstat-no" title="statement not covered">  var timestamp = date &amp;&amp; Date.parse(date)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return typeof timestamp === 'number'</span>
+<span class="cstat-no" title="statement not covered">  return typeof timestamp === 'number'</span>
     ? timestamp
     : NaN
 }
@@ -3430,20 +3428,21 @@ SendStream.prototype.setHeader = <span class="fstat-no" title="function not cove
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered" >function setHeaders (res, headers) {</span>
-<span class="cstat-no" title="statement not covered" >  var keys = Object.keys(headers)</span>
+<span class="fstat-no" title="function not covered">function setHeaders (res, headers) {</span>
+<span class="cstat-no" title="statement not covered">  var keys = Object.keys(headers)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; keys.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    var key = keys[i]</span>
-<span class="cstat-no" title="statement not covered" >    res.setHeader(key, headers[key])</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; keys.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    var key = keys[i]</span>
+<span class="cstat-no" title="statement not covered">    res.setHeader(key, headers[key])</span>
   }
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 12 2017 00:53:41 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 21:08:20 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
