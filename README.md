@@ -1,7 +1,10 @@
-# test coverage for  [send (v0.15.1)](https://github.com/pillarjs/send#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-send.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-send) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-send.svg)](https://travis-ci.org/npmtest/node-npmtest-send)
+# npmtest-send
+
+#### test coverage for  [send (v0.15.1)](https://github.com/pillarjs/send#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-send.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-send) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-send.svg)](https://travis-ci.org/npmtest/node-npmtest-send)
+
 #### Better streaming static file server with Range and conditional-GET support
 
-[![NPM](https://nodei.co/npm/send.png?downloads=true)](https://www.npmjs.com/package/send)
+[![NPM](https://nodei.co/npm/send.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/send)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-send/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-send/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-send/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-send/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-send/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-send/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-send/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-send/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-send/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-send/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-send%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-send/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-send/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-send/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-send/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-send%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-send/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-send/build/test-report.html](https://npmtest.github.io/node-npmtest-send/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-send/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-send/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-send/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-send/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-send/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-send/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-send/build/screenCapture.npmPackageListing.svg)
 
@@ -27,24 +36,20 @@
 
 {
     "author": {
-        "name": "TJ Holowaychuk",
-        "email": "tj@vision-media.ca"
+        "name": "TJ Holowaychuk"
     },
     "bugs": {
         "url": "https://github.com/pillarjs/send/issues"
     },
     "contributors": [
         {
-            "name": "Douglas Christopher Wilson",
-            "email": "doug@somethingdoug.com"
+            "name": "Douglas Christopher Wilson"
         },
         {
-            "name": "James Wyatt Cready",
-            "email": "jcready@gmail.com"
+            "name": "James Wyatt Cready"
         },
         {
-            "name": "Jesús Leganés Combarro",
-            "email": "piranna@gmail.com"
+            "name": "Jesús Leganés Combarro"
         }
     ],
     "dependencies": {
@@ -98,13 +103,11 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "dougwilson",
-            "email": "doug@somethingdoug.com"
+            "name": "dougwilson"
         }
     ],
     "name": "send",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/pillarjs/send.git"
