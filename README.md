@@ -1,6 +1,6 @@
 # npmtest-send
 
-#### test coverage for  [send (v0.15.1)](https://github.com/pillarjs/send#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-send.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-send) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-send.svg)](https://travis-ci.org/npmtest/node-npmtest-send)
+#### basic test coverage for  [send (v0.15.1)](https://github.com/pillarjs/send#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-send.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-send) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-send.svg)](https://travis-ci.org/npmtest/node-npmtest-send)
 
 #### Better streaming static file server with Range and conditional-GET support
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-send/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-send/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-send/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-send/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-send/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-send/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-send/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-send/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-send/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-send/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-send/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-send/build/coverage.html/index.html)
 
@@ -118,7 +118,8 @@
         "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks --reporter spec",
         "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot"
     },
-    "version": "0.15.1"
+    "version": "0.15.1",
+    "bin": {}
 }
 ```
 
